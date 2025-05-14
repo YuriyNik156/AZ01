@@ -6,6 +6,6 @@ df = pd.read_csv("dz.csv") # Загрузка набора данных из CSV
 
 df.fillna(value = 0, inplace = True) # Замена пустых значений на 0.0
 
-group = df.groupby("City")["Salary"].mean() # Вывод средней зарплаты по городам
+salary_by_city = df.groupby("City")["Salary"].mean() # Вывод средней зарплаты по городам
 
 print(group)
